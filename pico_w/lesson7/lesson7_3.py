@@ -8,8 +8,14 @@
 import time
 import network
 
-ssid = 'STUDENT-C2-3'
-password = '28721940'
+#ssid = 'STUDENT-C2-3'
+#password = '28721940'
+
+ssid = 'Linksys02931_5GHz'
+password = 'ije00rj6sf'
+
+#ssid = 'CY_iPhone'
+#password = 'abcdefff'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
