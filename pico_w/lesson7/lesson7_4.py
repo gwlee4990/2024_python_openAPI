@@ -19,7 +19,11 @@ def alert(temp):
         rtc = RTC()
         date_tuple = rtc.datetime()
         date_str = f'{date_tuple[0]}-{date_tuple[1]}-{date_tuple[2]} {date_tuple[4]}:{date_tuple[5]}:{date_tuple[6]}'
+<<<<<<< HEAD
         url_str = f'https://hook.eu2.make.com/uwhlimk7ou04knu4i70z8jeg2fh2oj8m?date={date_str}&temperature={temp}&from=學院養魚場'
+=======
+        url_str = f'https://hook.eu2.make.com/4e9sg1vrw4yjjebhdac4oqg2nwolccrc?date={date_str}&temperature={temp}&from=在家做'
+>>>>>>> 961c31f64f771ddfb98839f64a7194c6351a5428
         try:
             response = urequests.get(url_str)            
         except:
@@ -30,7 +34,10 @@ def alert(temp):
                 print("傳送訊息成功")
             else:
                 print("傳送失敗(make服務出問題)")
+<<<<<<< HEAD
             response.close()
+=======
+>>>>>>> 961c31f64f771ddfb98839f64a7194c6351a5428
         start_time = time.ticks_ms()
 
 def second1(t):
