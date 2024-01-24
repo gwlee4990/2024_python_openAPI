@@ -39,11 +39,11 @@ while True:
             if is_press == True:     
                 print('release')
                 currentTime = getCurrentTime()
-                tempertaure = getTemperature()
+                temperature = getTemperature()
                 light = getLightValue()
                 is_press = False
                 
-                url_str = f'https://openapi-test-u1jw.onrender.com/pico_w/{currentTime}?address=chicken_KFC&temperature={tempertaure}&{light}'
+                url_str = f'https://openapi-test-u1jw.onrender.com/pico_w/{currentTime}?address=chicken_KFC&celsius={temperature}&light={light}'
                 try:
                     response = urequests.get(url_str)
                     pass
