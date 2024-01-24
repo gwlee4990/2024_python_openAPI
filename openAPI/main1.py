@@ -18,6 +18,7 @@ async def get_item(item_id:int):
     print(f"使用者輸入了:{item_id}")
     return {"item_id": item_id}
 
+
 @app.get("/items/{date}/{celsius}")
 async def get_item(date:str,celsius:float):
     print(f"日期:{date}")
@@ -30,6 +31,14 @@ fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"
 @app.get("/items/")
 async def read_item(skip: int = 0, limit: int = 10):
     return fake_items_db[skip : skip + limit]
+
+@app.get("/pico_w/{date}")
+async def read_item(date:str ,address:str,celsius:float,light:float):
+    print(f"日期:{date}")
+    print(f"位置:{address}")
+    print(f"攝氏:{celsius}")
+    print(f"光線:{light}")
+    return {"狀態":"儲存成功"}
 
 @app.get("/pico_w/{date}")
 async def read_item(date:str ,address:str,celsius:float=0.0):
